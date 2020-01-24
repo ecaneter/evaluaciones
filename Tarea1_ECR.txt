@@ -1,0 +1,338 @@
+package Tarea01;
+
+import java.util.Scanner;
+
+public class Tarea01 {
+
+	private static Scanner sc;
+	
+	public static void main(String[] args) {
+		sc = new Scanner(System.in);
+		int s=0,m=0,i,n,op;
+		
+		do {
+			System.out.println(" ");
+			System.out.println("********************* Menu *********************");
+			System.out.println("***** 1.- Secuencial                       *****");
+			System.out.println("***** 2.- Condicional si entonces:         *****");
+			System.out.println("***** 3.- Condicional si entonces anidado. *****");
+			System.out.println("***** 4.- Condicional segun.               *****");
+			System.out.println("***** 5.- Repetitiva Mientras.             *****");
+			System.out.println("***** 6.- Repetitiva Repetir.              *****");
+			System.out.println("***** 7.- Repetitiva Para.                 *****");
+			System.out.println("***** 8.- Arreglo Simple.                  *****");
+			System.out.println("***** 9.- Arreglo Bidimencional.           *****");
+			System.out.println("***** 0.- Hasta pronto.                    *****");
+			System.out.println("************************************************");
+			System.out.println(" ");
+			System.out.print("Ingrese una opcion: ");
+			System.out.print(" ");
+			op=sc.nextInt();
+			
+			switch (op){
+			case 0:
+				System.out.println(" ");
+				System.out.print("Hasta pronto");
+				System.out.println(" ");
+				break;
+			case 1:
+				System.out.println(" ");
+				op1();
+				System.out.println(" ");
+				break;
+			case 2:
+				System.out.println(" ");
+				op2();
+				System.out.println(" ");
+				break;
+			case 3:
+				System.out.println(" ");
+				op3();
+				System.out.println(" ");
+				break;
+			case 4:
+				System.out.println(" ");
+				op4();
+				System.out.println(" ");
+				break;
+			case 5:
+				System.out.println(" ");
+				op5();
+				System.out.println(" ");
+				break;
+			case 6:
+				System.out.println(" ");
+				op6();
+				System.out.println(" ");
+				break;
+			case 7:
+				System.out.println(" ");
+				op7();
+				System.out.println(" ");
+				break;	
+			case 8:
+				System.out.println(" ");
+				op8();
+				System.out.println(" ");
+				break;
+			case 9:
+				System.out.println(" ");
+				op9();
+				System.out.println(" ");
+				break;	
+			default: 
+				System.out.println(" ");
+				System.out.println("Ingrese opcion valida");
+				System.out.println(" ");
+			}
+		}while(op!=0);
+	}
+	
+	public static void op1(){
+		System.out.println("Op1");
+		System.out.println("Debera pedir 3 numeros y mostrar el promedio de estos: ");
+		System.out.println(" ");
+		int n1,n2,n3;
+		System.out.print("Ingrese 1er numero: ");
+		n1=sc.nextInt();
+		System.out.print("Ingrese 2do numero: ");
+		n2=sc.nextInt();
+		System.out.print("Ingrese 3er numero: ");
+		n3=sc.nextInt();
+		System.out.println(n1+" + "+n2+" + "+n3+" = "+(n1+n2+n3));
+	}
+	public static void op2(){
+		System.out.println("Op2");
+		System.out.println("En un lugar tradicional antiguo se pedira el nombre y genero de la persona, siendo el genero determinate para derivarlo al baño de mujeres u hombres: ");
+		System.out.println(" ");
+		int g;
+		String nombre;
+		System.out.print("Ingrese nombre: ");
+		nombre=sc.next();
+		System.out.print("Ingrese genero (1.-F/2.-M): ");
+		g=sc.nextInt();
+		if(g==1) {
+			System.out.println(nombre+": Baño de mujeres");
+		}
+		if(g==2) {
+			System.out.println(nombre+": Baño de hombres");
+		}
+		else {
+			System.out.println("Opcion Invalida");
+		}
+			
+	}
+	public static void op3(){
+		System.out.println("Op3");
+		System.out.println("En el ejercicio anterior preguntar lo mismo angterior solo si quiere ir al wc cobrar $250 y si quiere ir a duchas$ 2.500: ");
+		System.out.println(" ");
+		int g,n;
+		String nombre;
+		System.out.print("Ingrese nombre: ");
+		nombre=sc.next();
+		System.out.print("Ingrese genero (1.-F/2.-M): ");
+		g=sc.nextInt();
+		if(g==1) {
+			System.out.print("Necesita baño o duchas (1.-Baño/2.-Ducha): ");
+			n=sc.nextInt();
+			if(n==1) {
+				System.out.println(nombre+": Baño de mujeres -> Baño: $250 ");
+			}
+			else if(n==2) {
+				System.out.println(nombre+": Baño de mujeres -> Ducha: $2500 ");
+			}
+			else {
+				System.out.println("Opcion Invalida");
+			}	
+		}
+		else if(g==2) {
+			System.out.print("Necesita baño o duchas (1.-Baño/2.-Ducha): ");
+			n=sc.nextInt();
+			if(n==1) {
+				System.out.println(nombre+": Baño de hombres -> Baño: $250 ");
+			}
+			else if(n==2) {
+				System.out.println(nombre+": Baño de hombres -> Ducha: $2500");
+			}
+			else {
+				System.out.println("Opcion Invalida");
+			}
+		}
+		else {
+			System.out.println("Opcion Invalida");
+		}
+		
+	}
+	public static void op4(){
+		System.out.println("Op4");
+		System.out.println("Ingrese un numero del 1 al 10 y mostrar el numero en palabras: ");
+		System.out.println(" ");
+		System.out.print("Ingrese una opcion(1-10): ");
+		System.out.print(" ");
+		
+		int op;
+		op=sc.nextInt();
+		
+		switch (op){
+		case 1:
+			System.out.println(" 1 -> Uno ");
+			break;
+		case 2:
+			System.out.println(" 2 -> Dos ");
+			break;
+		case 3:
+			System.out.println(" 3 -> Tres ");
+			break;
+		case 4:
+			System.out.println(" 4 -> Cuatro ");
+			break;
+		case 5:
+			System.out.println(" 5 -> Cinco ");
+			break;
+		case 6:
+			System.out.println(" 6 -> Seis ");
+			break;
+		case 7:
+			System.out.println(" 7 -> Siete ");
+			break;	
+		case 8:
+			System.out.println(" 8 -> Ocho ");
+			break;
+		case 9:
+			System.out.println(" 9 -> Nueve ");
+			break;	
+		case 10:
+			System.out.println(" 10 -> Diez ");
+			break;		
+		default: 
+			System.out.println(" ");
+			System.out.println("Ingrese opcion valida");
+			System.out.println(" ");
+		}
+	}
+	public static void op5(){
+		System.out.println("Op5");
+		System.out.println("Ingresar N numeros y que pare al ingresar un cero. Al terminar me diga la cantidad de numeros ingresados excluyendo al cero además de el promedio de estos: ");
+		System.out.println(" ");
+		int n,cont=0,s=0;
+		double p;
+		System.out.println("Ingrese un numero: ");
+		n=sc.nextInt();
+		while (n!=0) {
+			s=s+n;
+			cont++;
+			System.out.println("Ingrese un numero: ");
+			n=sc.nextInt();
+		}
+		if(cont!=0) {
+			p=s/cont;
+			System.out.println("Cantidad de nros ingresados: "+cont+" -> promedio: "+p);
+		}
+		else
+			System.out.println("Adios");
+			
+	}
+	public static void op6(){
+		System.out.println("Op6");
+		System.out.println("Ingrese N nombres y cuando ingrese el nombre \"Juan\" me diga la cantidad de intentos que se realizaron para llegar a el: ");
+		System.out.println(" ");
+		int cont=0;
+		String nombre=null;
+		do {
+			System.out.print("Ingrese nombre: ");
+			nombre=sc.next();
+			cont++;
+		}while(!nombre.equals("Juan"));
+		System.out.println("Cantidad de intentos: "+cont);
+	}
+	public static void op7(){
+		System.out.println("Op7");
+		System.out.println("Para un maximo de 10 personas preguntar su nombre y mostrar los que repiten mas de 1 vez. Sino mostrar no se repitio ninguno: ");
+		System.out.println(" ");
+		String[ ] Nombres = new  String[10];		
+		int i,j,cont=0,cont2=0;
+		
+		for(i=0;i<10;i++) {
+			System.out.print("Ingrese nombre "+(i+1)+": ");
+			Nombres[i]=sc.next();
+		}
+		for(i=0;i<10;i++) {
+			for(j=0;j<10;j++) {
+				
+				if(Nombres[i].equals(Nombres[j])&&(i!=j)){
+					System.out.println(i+" - "+j);
+					cont++;
+				}
+				
+				
+			}
+			if(cont>0) {
+				System.out.println(Nombres[i]);
+				cont=0;
+				cont2++;
+			}
+			
+		}
+		if(cont2==0) {
+			System.out.println("No existen nombres repetidos");
+		}
+		
+	}
+	public static void op8(){
+		System.out.println("Op8");
+		System.out.println("Pedir el tamaño de un arreglo en el cual debo ingresar la lista de alumnos de Full Satck Java. Y luego desplegarlos en pantalla con un maximo de 5 alumnos por linea: ");
+		System.out.println(" ");
+		System.out.print("Ingrese la cantidad de alumnos deseada: ");
+		int i,j,n,cont=0;
+		n=sc.nextInt();
+		String[ ] Nombres = new  String[n];		
+				
+		for(i=0;i<n;i++) {
+			System.out.print("Ingrese nombre "+(i+1)+": ");
+			Nombres[i]=sc.next();
+		}
+		System.out.println(" ");
+		for(i=0;i<n;i++) {
+			System.out.print("Nombre: "+Nombres[i]+" ");
+			cont++;
+			if (cont==5) {
+				System.out.println(" ");
+				cont=0;
+			}
+		}
+		
+	}
+	public static void op9(){
+		System.out.println("Op9");
+		System.out.println("Ingresar nombre, apellido, fono y email de cada alumnos de Full Satck Java. Mostrar todos los datos de cada alumno en 1 linea: ");
+		System.out.println(" ");
+		System.out.print("Ingrese la cantidad de alumnos deseada: ");
+		int i,j,n,cont=0;
+		n=sc.nextInt();
+		String[ ][] Alumnos = new  String[n][4];		
+		System.out.println(" ");		
+		for(i=0;i<n;i++) {
+			System.out.println(" ");
+			System.out.println("Ingrese Informacion alumno "+(i+1)+": ");
+			System.out.print("Ingrese Nombre: ");
+			Alumnos[i][0]=sc.next();
+			System.out.print("Ingrese Apellido: ");
+			Alumnos[i][1]=sc.next();
+			System.out.print("Ingrese Fono: ");
+			Alumnos[i][2]=sc.next();
+			System.out.print("Ingrese Email: ");
+			Alumnos[i][3]=sc.next();
+		}
+		System.out.println(" ");
+		for(i=0;i<n;i++) {
+			System.out.println("Alumno "+(i+1)+": ");
+			System.out.print("Nombre: "+Alumnos[i][0]+" ");
+			System.out.print("Apellido: "+Alumnos[i][1]+" ");
+			System.out.print("Fono: "+Alumnos[i][2]+" ");
+			System.out.print("Email: "+Alumnos[i][3]+" ");
+			System.out.println(" ");	
+		
+		}
+	}
+	
+}
